@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="352.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenes.init.executeController">
+   <content>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="414.0">
+         <tabs>
+            <Tab closable="false" text="Process">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="4.39996337890625" prefWidth="24.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.4000244140625" minWidth="10.0" prefWidth="89.20001220703125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.60003662109375" minWidth="0.0" prefWidth="55.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="0.0" prefWidth="27.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.60003662109375" minWidth="9.199951171875" prefWidth="31.199951171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.5999755859375" minWidth="10.0" prefWidth="28.800048828125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.5999755859375" minWidth="10.0" prefWidth="64.5999755859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.5999755859375" minWidth="10.0" prefWidth="65.4000244140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.5999755859375" minWidth="3.4000244140625" prefWidth="44.60003662109375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.199951171875" minWidth="9.39996337890625" prefWidth="11.39996337890625" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="112.4000244140625" minHeight="10.0" prefHeight="13.79998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.4000244140625" minHeight="10.0" prefHeight="26.399993896484375" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.4000244140625" minHeight="10.0" prefHeight="30.79998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="112.4000244140625" minHeight="0.0" prefHeight="28.199981689453125" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="114.39999389648438" minHeight="3.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="160.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="130.79998779296875" minHeight="6.79998779296875" prefHeight="21.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="153.20001220703125" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="153.20001220703125" minHeight="10.0" prefHeight="31.4000244140625" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="153.20001220703125" minHeight="4.399993896484375" prefHeight="25.5999755859375" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="153.20001220703125" minHeight="10.0" prefHeight="30.4000244140625" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="timeCondition_cb" mnemonicParsing="false" text="Time Condition (min)" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="4" />
+                        <Label maxWidth="1.7976931348623157E308" styleClass="information-label" text="Total Population" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label maxWidth="1.7976931348623157E308" styleClass="information-label" text="Highest Fitness" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                        <Label maxWidth="1.7976931348623157E308" styleClass="information-label" text="Generation Progress" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                        <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="87.0" spacing="10.0" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                           <children>
+                              <Button fx:id="ActionExecute_Button" mnemonicParsing="false" onAction="#ActionExecuteButton_onAction" text="Start" />
+                              <Button fx:id="clearButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#clearTaskButton_onAction" text="Clear" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="totalPopulation" ellipsisString="" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="8" />
+                        <Label fx:id="highestFitness" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="8" />
+                        <CheckBox fx:id="fitnessCondition_cb" mnemonicParsing="false" text="Fitness Condition" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="generationCondition_cb" mnemonicParsing="false" text="Generation Condition" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <Label fx:id="ProcessTitleCondition_Label" text="Please choose one or more of the following conditions:" GridPane.columnIndex="1" GridPane.columnSpan="6" GridPane.rowIndex="1" />
+                        <TextField fx:id="generationCondition_textbox" disable="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="fitnessCondition_testbox" disable="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="timeCondition_textbox" disable="true" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <ProgressBar fx:id="GenerationProgressBar" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="206.0" progress="0.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="9">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </ProgressBar>
+                        <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="6" />
+                        <Label fx:id="changeableFieldTitle_Label" text="Press the paramenter you would like to change:" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="Elitism_cb" disable="true" mnemonicParsing="false" text="Elistism" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="Elitism_textbox" disable="true" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <Label fx:id="Selection_Label" text="Selection" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <Label fx:id="Crossover_Label" layoutX="274.0" layoutY="67.0" text="Crossover" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="Selection_comboBox" disable="true" prefWidth="150.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="Crossover_comboBox" disable="true" prefWidth="150.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+                        <Label fx:id="ConditionData_Label" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowIndex="7" />
+                        <ProgressBar fx:id="FitnessProgressBar" layoutX="219.0" layoutY="231.0" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="206.0" progress="0.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="10">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </ProgressBar>
+                        <ProgressBar fx:id="TimeProgressBar" layoutX="263.0" layoutY="272.0" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="206.0" progress="0.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="11">
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </ProgressBar>
+                        <Label layoutX="122.0" layoutY="246.0" maxWidth="1.7976931348623157E308" styleClass="information-label" text="Fitness Progress" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+                        <Label layoutX="122.0" layoutY="275.0" maxWidth="1.7976931348623157E308" styleClass="information-label" text="Time Progress" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                        <Button fx:id="mutationSetting_Button" disable="true" mnemonicParsing="false" text="Mutation Settings" visible="false" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="View">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <AnchorPane prefHeight="10.0" prefWidth="438.0" BorderPane.alignment="CENTER" />
+                     </top>
+                     <right>
+                        <AnchorPane prefHeight="278.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+                     </right>
+                     <left>
+                        <AnchorPane prefHeight="268.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="278.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+                           <content>
+                              <TableView fx:id="ViewTimeTable" />
+                           </content>
+                        </ScrollPane>
+                     </center>
+                     <bottom>
+                        <GridPane prefHeight="42.0" prefWidth="438.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.60003662109375" minWidth="10.0" prefWidth="55.4000244140625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.39996337890625" minWidth="10.0" prefWidth="118.5999755859375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.5999755859375" minWidth="10.0" prefWidth="53.79998779296875" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.20001220703125" minWidth="10.0" prefWidth="156.20001220703125" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.20001220703125" minWidth="10.0" prefWidth="56.4000244140625" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="ShowAs_ComboBox" prefWidth="150.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="FilterBySpecificName_ComboBox" prefHeight="25.0" prefWidth="123.0" visible="false" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                     </bottom>
+                  </BorderPane>
+               </content></Tab>
+         </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>
