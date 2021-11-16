@@ -29,8 +29,6 @@ fitness - the grade of a solution (range of 0 – 100)
 population - a group of solutions
 each generation contains a population
 
-
-
 #### System performance ####
 
 				generation amount
