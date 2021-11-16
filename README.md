@@ -28,11 +28,3 @@ individual - a TT solution
 fitness - the grade of a solution (range of 0 – 100)
 population - a group of solutions
 each generation contains a population
-
-#### System performance ####
-
-				generation amount
-			1,000		10,000		100,000
-population	200	1sec		8.414sec	91.453sec
-size		500	1.437sec	19.463sec	194.532sec
-		1,000	3.86sec		42.856sec	429.477sec
