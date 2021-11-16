@@ -6,9 +6,9 @@ An effortless way to find the best schedule that's meet your school workers and 
 
 #####   SYSTEM REQUIREMENTS  #####
 
-# Runs best on Windows 7 (and higher) or macOS (10.11.6) with Linux (centOS 6.7) or higher
+Runs best on Windows 7 (and higher) or macOS (10.11.6) with Linux (centOS 6.7) or higher
 
-# Requires Java 1.8 (https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html)
+Requires Java 1.8 (https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html)
 
 
 
